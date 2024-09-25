@@ -1,5 +1,72 @@
 <!doctype html>
 <!doctype html>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-search.css">
+        <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                font-family: Arial, sans-serif;
+            }
+            #map {
+                width: 100%;
+                height: calc(100% - 100px);
+            }
+            header, footer {
+                background-color: #4CAF50;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                font-size: 24px;
+            }
+            footer {
+                font-size: 16px;
+            }
+        </style>
+        <title>Jari Mari Yukta</title>
+    </head>
+    <body>
+        <header>Jari Mari Yukta</header>
+        <div id="map"></div>
+        <footer>
+            Contact: +91-1234567890 | Email: <a href="mailto:contact@jarimari.com" style="color:white;">contact@jarimari.com</a>
+        </footer>
+
+        <script src="js/leaflet.js"></script>
+        <script src="js/L.Control.Layers.Tree.min.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
+        <script src="js/leaflet-measure.js"></script>
+        <script src="js/leaflet-search.js"></script>
+        <script src="data/jarimari_attribute_1.js"></script>
+        <script src="data/jarimari_attributecopy_2.js"></script>
+
+        <script>
+            var map = L.map('map', { zoomControl: false, maxZoom: 28, minZoom: 1 })
+                .fitBounds([[19.0885,72.8806], [19.0934,72.8873]]);
+            L.tileLayer('https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+                attribution: '&copy; Carto'
+            }).addTo(map);
+            L.control.zoom({ position: 'topleft' }).addTo(map);
+            L.co
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
